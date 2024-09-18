@@ -40,3 +40,13 @@ p[data-type="example"] {
     background-color: rgb(154, 66, 104); 
     color: black;
 }
+footer {
+    background-color: #212517;
+    color: #d42e00;
+    text-align: center;
+    padding: 15px 0;
+}
+.footer-content p {
+    margin: 0;
+    font-size: 1em;
+}
