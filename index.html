@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Специфічність селекторів</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div>
+        <p>Застосовується до тегів p, вкладених у div, вага 1*</p>
+    </div>
+    <div class="example">
+        <p>Застосовується до тегів p з класом .example, вага 10*</p>
+    </div>
+    <div id="unique-example">
+        <p>Застосовується до тегів p з id #unique-example, вага 100*</p>
+    </div>
+    <div>
+        <p data-type="example">Застосовується до тегів p з атрибутом data-type="example", вага 10*</p>
+    </div>
+    <div class="outer-div">
+        <div class="inner-div">
+            <p>Застосовується до тегів p, вкладених у div всередині іншого div, вага 2*</p>
+        </div>
+    </div>
+    <div class="parent-div">
+        <p>Застосовується до тегів p, що є дочірніми елементами div, вага 2*</p> 
+        <div>
+            <p>Цей тег p не є дочірнім, він на другому рівні, тому не буде стилізований як дочірній</p>
+        </div>
+    </div>
+    <div class="sequence-div">
+        <div>
+            <p>Застосовується до тегів p, вкладених у div, вкладений у інший div, вага 3*</p> 
+        </div>
+    </div>
+    <div class="container">
+        <p class="text" data-info="combo">Застосовується до тегів p з класом .text і атрибутом data-info="combo", вага 20*</p>
+    </div>
+    <div class="nested-container">
+        <div class="text-wrapper">
+            <p class="nested-text">Застосовується до тегів p з класом .nested-text, вкладених у .text-wrapper, вага 20*</p>
+        </div>
+    </div>
+    <div class="combo-container" id="combo-id">
+        <p class="combo-text" data-role="complex">Застосовується до тегів p з id #combo-id, класом .combo-text і атрибутом data-role, вага 120*</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+
+p {
+    background-color: rgb(191, 95, 95); 
+    color: black;
+}
+.example p {
+    background-color: rgb(185, 137, 81);
+    color: black;
+}
+#unique-example p {
+    background-color: rgb(227, 230, 130); 
+    color: black;
+}
+
+p[data-type="example"] {
+    background-color: rgb(89, 155, 88); 
+    color: black;
+}
+.outer-div .inner-div p {
+    background-color: rgb(74, 99, 158); 
+    color: black;
+}
+.parent-div > p {
+    background-color: rgb(47, 57, 151); 
+    color: black;
+}
+.sequence-div div p {
+    background-color: rgb(104, 66, 142); 
+    color: black;
+}
+.container .text[data-info="combo"] {
+    background-color: rgb(45, 129, 108); 
+    color: black;
+}
+.nested-container .text-wrapper .nested-text {
+    background-color: rgb(138, 184, 188); 
+    color: black;
+}
+#combo-id .combo-text[data-role="complex"] {
+    background-color: rgb(154, 66, 104); 
+    color: black;
+}
